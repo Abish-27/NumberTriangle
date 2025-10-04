@@ -88,7 +88,6 @@ public class NumberTriangle {
      */
     public int retrieve(String path) {
         NumberTriangle current = this;
-
         for (int i = 0; i < path.length(); i++) {
             char step = path.charAt(i);
             if (step == 'l') {
@@ -97,7 +96,6 @@ public class NumberTriangle {
                 current = current.right;
             }
         }
-
         return current.root;
 
     }
@@ -131,14 +129,12 @@ public class NumberTriangle {
                 int value = Integer.parseInt(part);
                 currRow.add(new NumberTriangle(value));
             }
-
             if (prevRow != null) {
                 for (int i = 0; i < prevRow.size(); i++) {
                     prevRow.get(i).setLeft(currRow.get(i));
                     prevRow.get(i).setRight(currRow.get(i + 1));
                 }
             }
-
             if (top == null) {
                 top = currRow.get(0);
             }
