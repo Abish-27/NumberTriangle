@@ -64,14 +64,12 @@ public class NumberTriangle {
      * Note: a NumberTriangle contains at least one value.
      */
     public void maxSumPath() {
-        // for fun [not for credit]:
     }
 
 
     public boolean isLeaf() {
         return right == null && left == null;
     }
-
 
     /**
      * Follow path through this NumberTriangle structure ('l' = left; 'r' = right) and
@@ -103,7 +101,6 @@ public class NumberTriangle {
         return current.root;
 
     }
-
     /** Read in the NumberTriangle structure from a file.
      *
      * You may assume that it is a valid format with a height of at least 1,
@@ -153,12 +150,7 @@ public class NumberTriangle {
     }
 
     public static void main(String[] args) throws IOException {
-
         NumberTriangle mt = NumberTriangle.loadTriangle("input_tree.txt");
-
-        // [not for credit]
-        // you can implement NumberTriangle's maxPathSum method if you want to try to solve
-        // Problem 18 from project Euler [not for credit]
         mt.maxSumPath();
         System.out.println(mt.getRoot());
     }
